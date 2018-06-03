@@ -44,24 +44,39 @@ puts swap_elements_from_to(["a", "b", "c"],0,2); #=> ["c", "b", "a"]
 puts "\n";
 puts swap_elements_from_to(["a", "b", "c"],2,1); #=> ["a", "c", "b"]
 
+##
+# => #reverse_array reverses the order of the elements in the array
+##
 def reverse_array(array)
   return array.reverse;
 end
 
+##
+# => #kesha_maker swaps the third element in the array with "$"
+##
 def kesha_maker(array)
   return array.each { |element| element[2] = "$" };
 end
 
+##
+# => #find_a returns the first word that starts with "a"
+##
 def find_a(array)
   return array.select {|element| element[0] == "a"};
 end
 
+##
+# => #sum_array adds all of the elements in the array and returns the total
+##
 def sum_array(array)
   total = 0;
   array.each {|element| total += element};
   return total;
 end
 
+##
+# => #add_s adds "s" to the end of each element except for the second element due to the fact that "feet" is already plural
+##
 def add_s(array)
   return array.each_with_index.collect { | element, index | index != 1 ? "#{element}s" : element};
 end
