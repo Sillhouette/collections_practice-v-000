@@ -45,3 +45,6 @@ def sum_array(array)
   array.each {|element| total += element}
   return total;
 end
+
+def add_s(array)
+  array.each_with_index.collect { | element, index | if index != 1 element + "s"}
